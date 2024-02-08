@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/LandingPage";
-import logo from "./../assets/images/logo.svg";
+import { Logo } from "../components";
 import main from "./../assets/images/main.svg";
 
-const Landing = () => {
+function Landing() {
   return (
     <Wrapper>
       <nav>
-        <img src={logo} alt="logo jobs" aria-label="logo" className="logo" />
+        <Logo />
       </nav>
       <div className="container page">
         <div className="info">
@@ -19,7 +20,9 @@ const Landing = () => {
             praxis.
           </p>
 
-          <button className="btn btn-hero">login/Register</button>
+          <Link to="/register" className="btn btn-hero">
+            login/Register
+          </Link>
         </div>
         <img
           src={main}
@@ -30,6 +33,6 @@ const Landing = () => {
       </div>
     </Wrapper>
   );
-};
+}
 
 export default Landing;
